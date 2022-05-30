@@ -9,7 +9,8 @@ pipeline {
        					 }
 				stage('Build') {
             				steps {
-               				 sh "ls"
+               				 sh "cd hello-world-war"
+					 sh "docker build -t poojashreesrinivasan/hello:1.0 ."
             					}
        					 }
 				/*stage('Deploy') {
