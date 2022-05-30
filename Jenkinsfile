@@ -13,6 +13,13 @@ pipeline {
 					 sh "docker build -t poojashreesrinivasan/hello:1.0 ."
             					}
        					 }
+		
+				stage('Publish') {
+            				steps {
+						sh "docker login -u poojashreesrinivasan -p tanvitanush@1820"
+						sh "docker push  poojashreesrinivasan/hello:1.0"
+            					}
+       					 } 
 				/*stage('Deploy') {
             				steps {
 						sh "pwd"
