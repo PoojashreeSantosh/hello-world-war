@@ -7,5 +7,5 @@ RUN mvn clean package
 
 FROM tomcat
 CMD ["SERVICE" , "TOMCAT"]
-COPY --from = builder ./project/target/hello-world-war.war ./webapps
+COPY = builder ./hello-world-war/target/hello-world-war.war ./webapps
 RUN docker run -itd -p 8080:8080
